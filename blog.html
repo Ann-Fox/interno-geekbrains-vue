@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style/style-blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <path
+                    d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                    fill="#CDA274" />
+            </svg>
+            <h3 class="header__title">Interno</h3>
+        </div>
+        <div class="header__nav">
+            <a href="#">Home</a>
+            <a href="#">Project</a>
+            <a href="#">Blog</a>
+        </div>
+    </header>
+
+    <section class="blog center">
+        <div class="blog__heading">
+            <h2>Articles & News</h2>
+            <p>It is a long established fact that a reader will be distracted by the of readable content of a page when
+                lookings at its layouts the points of using.</p>
+        </div>
+        <div id='app' class="blog__items">
+
+            <div class="blog__item" v-for="articl in articles" :key="articl.id">
+
+                <div class="blog__item__top">
+                    <img :src="articl.url" alt="Kitchan Design">
+                    <div class="blog__item__tag">
+                        <p>{{articl.tag}}</p>
+                    </div>
+                </div>
+
+                <div class="blog__item__bottom">
+                    <h3 class="blog__item__heading">{{articl.heading}}</h3>
+                    <div class="blog__item__date">
+                        <p>{{articl.date}} </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- <div class="blog__item">
+
+                <div class="blog__item__top">
+                    <img src="images/blog-img-2.png" alt="">
+                    <div class="blog__item__tag">
+                        <p>KLiving Design</p>
+                    </div>
+                </div>
+
+                <div class="blog__item__bottom">
+                    <h3 class="blog__item__heading">Low Cost Latest Invented Interior Designing<br>Ideas</h3>
+                    <div class="blog__item__date">
+                        <p>22 December,2022 </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="blog__item">
+
+                <div class="blog__item__top">
+                    <img src="images/blog-img-3.png" alt="">
+                    <div class="blog__item__tag">
+                        <p>Interior Design</p>
+                    </div>
+                </div>
+
+                <div class="blog__item__bottom">
+                    <h3 class="blog__item__heading">Best For Any Office & Business Interior
+                        Solution</h3>
+                    <div class="blog__item__date">
+                        <p>25 December,2022 </p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <circle cx="26" cy="26.267" r="26" fill="#F4F0EC" />
+                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div> -->
+        </div>
+    </section>
+
+    <footer class="footer center">
+
+        <div class="footer__item">
+            <div class="header__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path
+                        d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z"
+                        fill="#CDA274" />
+                </svg>
+                <h3 class="header__title">Interno</h3>
+            </div>
+
+            <p class="footer__item__text">It is a long established fact that a reader will be distracted lookings.</p>
+
+            <div class="footer__item__social">
+                <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.6367 4.59375C17.3398 4.06641 17.9727 3.43359 18.4648 2.69531C17.832 2.97656 17.0938 3.1875 16.3555 3.25781C17.1289 2.80078 17.6914 2.09766 17.9727 1.21875C17.2695 1.64062 16.4609 1.95703 15.6523 2.13281C14.9492 1.39453 14 0.972656 12.9453 0.972656C10.9062 0.972656 9.25391 2.625 9.25391 4.66406C9.25391 4.94531 9.28906 5.22656 9.35938 5.50781C6.30078 5.33203 3.55859 3.85547 1.73047 1.64062C1.41406 2.16797 1.23828 2.80078 1.23828 3.50391C1.23828 4.76953 1.87109 5.89453 2.89062 6.5625C2.29297 6.52734 1.69531 6.38672 1.20312 6.10547V6.14062C1.20312 7.93359 2.46875 9.41016 4.15625 9.76172C3.875 9.83203 3.52344 9.90234 3.20703 9.90234C2.96094 9.90234 2.75 9.86719 2.50391 9.83203C2.96094 11.3086 4.33203 12.3633 5.94922 12.3984C4.68359 13.3828 3.10156 13.9805 1.37891 13.9805C1.0625 13.9805 0.78125 13.9453 0.5 13.9102C2.11719 14.9648 4.05078 15.5625 6.16016 15.5625C12.9453 15.5625 16.6367 9.97266 16.6367 5.08594C16.6367 4.91016 16.6367 4.76953 16.6367 4.59375Z"
+                        fill="#292F36" />
+                </svg>
+
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4.14062 16V5.48828H0.871094V16H4.14062ZM2.48828 4.08203C3.54297 4.08203 4.38672 3.20312 4.38672 2.14844C4.38672 1.12891 3.54297 0.285156 2.48828 0.285156C1.46875 0.285156 0.625 1.12891 0.625 2.14844C0.625 3.20312 1.46875 4.08203 2.48828 4.08203ZM16.3398 16H16.375V10.2344C16.375 7.42188 15.7422 5.24219 12.4375 5.24219C10.8555 5.24219 9.80078 6.12109 9.34375 6.92969H9.30859V5.48828H6.17969V16H9.44922V10.7969C9.44922 9.42578 9.69531 8.125 11.3828 8.125C13.0703 8.125 13.1055 9.67188 13.1055 10.9023V16H16.3398Z"
+                        fill="#292F36" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="footer__item">
+            <h3>Pages</h3>
+            <div class="footer__nav">
+                <a href="#">Home</a>
+                <a href="#">Project</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+        <div class="footer__item">
+            <h3>Services</h3>
+            <div class="footer__nav">
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+            </div>
+        </div>
+        <div class="footer__item">
+            <h3>Contact</h3>
+            <div class="footer__item__contact">
+                <address>55 East Birchwood Ave. Brooklyn, New York 11201</address>
+                <main>contact@interno.com</main>
+                <p>(123) 456 - 7890</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- Код для подключения и работы Vue
+    https://codepen.io/team/Vue/pen/KKpRVpx -->
+    <script>
+        const VueApp = {
+            data() {
+                return {
+                    articles: [
+                        {
+                            url: 'images/blog-img-1.png',
+                            tag: 'Kitchan Design',
+                            heading: 'Let`s Get Solution For Building Construction Work',
+                            date: '26 December,2022'
+                        },
+                        {
+                            url: 'images/blog-img-2.png',
+                            tag: 'Living Design',
+                            heading: 'Low Cost Latest Invented Interior Designing Ideas.',
+                            date: '22 December,2022'
+                        },
+                        {
+                            url: 'images/blog-img-3.png',
+                            tag: 'Interior Design',
+                            heading: 'Best For Any Office & Business Interior Solution',
+                            date: '25 December,2022'
+                        },
+                        {
+                            url: 'images/blog-img-4.png',
+                            tag: 'Kitchan Design',
+                            heading: 'Let`s Get Solution For Building Construction Work',
+                            date: '26 December,2022'
+                        },
+                        {
+                            url: 'images/blog-img-5.png',
+                            tag: 'Living Design',
+                            heading: 'Low Cost Latest Invented Interior Designing Ideas.',
+                            date: '22 December,2022'
+                        },
+                        {
+                            url: 'images/blog-img-6.png',
+                            tag: 'Interior Design',
+                            heading: 'Best For Any Office & Business Interior Solution',
+                            date: '25 December,2022'
+                        },
+                    ],
+                };
+            },
+        };
+        Vue.createApp(VueApp).mount("#app");
+    </script>
+</body>
+
+</html>
+
+<!-- Фреймворк Vue.js
+Урок 4. Семинар: Методы и работа с контентом
+Домашнее задание
+
+Продолжаем создание макета https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=209-15&t=VK2zHccBmhGGNIzu-0 Домашнее задание 2 страница Blog
+
+Что мы можем заметить в проекте, что часть "Articles & News" повторяется, как итог, вам необходимо создать блок Articles & News с помощью vue.js где данные для вёрстки будут храниться в массиве объектов и выводить на страницу с помощью цикла v-for
+
+### Задание VUE
+
+Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->

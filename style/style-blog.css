@@ -70,7 +70,7 @@ p {
 }
 
 .banner {
-  background-image: url("/images/blog-banner.jpg");
+  background-image: url("../images/blog-banner.jpg");
   background-repeat: no-repeat;
   background-origin: content-box;
   height: 356px;

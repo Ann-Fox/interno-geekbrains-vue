@@ -6,6 +6,7 @@
 body {
   font-family: "DM Serif Display", serif;
 }
+
 h2 {
   color: #292f36;
   text-align: center;
@@ -141,6 +142,7 @@ p {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-top: 47px;
     }
 
     &__text {

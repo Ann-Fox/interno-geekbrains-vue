@@ -140,6 +140,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 47px;
 }
 .project__items__text {
   display: flex;

@@ -175,9 +175,11 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
-.aside h3 {
-  color: #292F36;
+.blog__aside {
+  margin-left: 52px;
+}
+.blog__aside h3 {
+  color: #292f36;
   font-family: DM Serif Display;
   font-size: 25px;
   font-style: normal;
